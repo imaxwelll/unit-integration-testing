@@ -30,7 +30,7 @@ describe("<Todo /> component Unit Tests", () => {
 	});
 
 	it("should set props correctly", () => {
-		component.setProps({text: "hello" });
+		component.setProps({ text: "hello" });
 		expect(component.props().children).toEqual("hello");
 	});
 
@@ -46,13 +46,13 @@ describe("<Todo /> Styling behaviour", () => {
 		const component = shallow(
 			<Todo onClick={mockFn} completed={false} text="go home" />
 		);
-		expect(component.props().style).toEqual({ textDecoration: 'none' });
+		expect(component.props().style).toEqual({ textDecoration: "none" });
 	});
 
 	it("should have linethrough style when Todo is complete", () => {
 		const component = shallow(
 			<Todo onClick={mockFn} completed={true} text="go home" />
 		);
-		expect(component.props().style).toEqual({ textDecoration: 'line-through' });
+		expect(component.props().style).toEqual({ textDecoration: "line-through" });
 	});
-})
+});
